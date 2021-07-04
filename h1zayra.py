@@ -54,7 +54,7 @@ hizayra~<< ''')
          lookup()
 
     if n == '6':
-         trace()
+         trace1()
 
     if n == '7':
          DoC()
@@ -107,7 +107,7 @@ def lookup():
     ip = input("Enter target IP address or host:")
     print(os.system('curl http://api.hackertarget.com/reverseiplookup/?q=' +ip))
 
-def trace():
+def trace1():
     ip = input("Please enter target IP address:")
     print(os.system('curl https://api.hackertarget.com/mtr/?q=' +ip))
 
@@ -139,8 +139,9 @@ def expl():
     os.system("msfconsole")
 
 def out():						
+    print("your output file name will be scanput")
     ip = input("Please enter target IP address or host:")
-    print(os.system('nmap -oN ' +ip))
+    print(os.system('nmap -oN scanput ' +ip))
 
 if __name__ == "__main__":
     main()
